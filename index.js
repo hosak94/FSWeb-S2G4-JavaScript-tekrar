@@ -134,7 +134,24 @@ console.log(CemberinAlani(15,pi));
 	
 	//3f çözümü
 	
-	/* kodlar buraya */
+	var tekraredensayilar = [];
+
+	var tekrarSayilari = {};
+	for (var i = 0; i < sayilar.length; i++) {
+	if (tekrarSayilari[sayilar[i]] === undefined) {
+	tekrarSayilari[sayilar[i]] = 1;
+	} else {
+	tekrarSayilari[sayilar[i]]++;
+	}
+	}
+
+	for (var sayi in tekrarSayilari) {
+	if (tekrarSayilari[sayi] > 1) {
+	tekraredensayilar.push(sayi + " sayısı " + tekrarSayilari[sayi] + " kere tekrar edilmiştir");
+	}
+	}
+
+	console.log("Tekrar eden sayılar: " + tekraredensayilar);
 
 
 
